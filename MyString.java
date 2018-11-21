@@ -10,7 +10,7 @@ public char charAt(int index){
   return data[index];
 }
 public int length(){
-  return this.length();
+  return data.length;
 }
 public String subSequence(int start, int end){
   String value="";
