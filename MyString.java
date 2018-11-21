@@ -1,4 +1,4 @@
-public class MyString implements CharSequence {
+public class MyString implements CharSequence, Comparable<CharSequence> {
   private char[] data;
 public MyString(CharSequence a){
   data= new char[a.length()];
@@ -26,11 +26,17 @@ public String toString(){
   }
   return value;
 }
+public int compareTo(CharSequence b){
+  if (this.equals(b)) return 0;
+  return -1;
+}
   public static void main (String args[]){
 MyString guy = new MyString("hello");
+MyString bro = new MyString("i am but a chimney sweep.");
 System.out.println(guy);
 System.out.println(guy.length());
 System.out.println(guy.charAt(3));
 System.out.println(guy.subSequence(1,3));
+System.out.println(bro);
   }
 }
