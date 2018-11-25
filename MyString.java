@@ -38,5 +38,8 @@ System.out.println(guy.length());
 System.out.println(guy.charAt(3));
 System.out.println(guy.subSequence(1,3));
 System.out.println(bro);
+System.out.println(guy.compareTo("america"));
+System.out.println(guy.compareTo("hello"));
+System.out.println(guy.compareTo(bro));
   }
 }
