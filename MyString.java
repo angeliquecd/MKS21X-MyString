@@ -27,10 +27,39 @@ public String toString(){
   return value;
 }
 public int compareTo(CharSequence b){
-  MyString b2 = new MyString(b);//converts other vaue to mystring
-  return this.toString().compareTo(b2.toString());//converts both to strings and then compares them
+  MyString a = new MyString(this);
+  MyString z = new MyString(b);
+  int sum1= 0;
+  int sum2=0;
+  int comparison=0;
+  int len = a.length();
+  int shorter = a.length();
+  if (a.length()>z.length()){
+    len = a.length();
+    shorter=z.length();
+    comparison=1;
+  }
+  else{
+    len= z.length();
+    shorter=a.length();
+    if (a.length()<z.length()){
+    comparison=-1;}
+    else{
+      comparison=0;}
+  }
+  for (int c = 0;c < len ; c++){
+    if (c<z.length() && c<a.length()){
+      if (z.charAt(c)>a.charAt(c)){
+        return -1;}
+      else{
+        if (z.charAt(c)<a.charAt(c)){
+        return 1;}
+      }
+  }
 }
-  public static void main (String args[]){//test cases
+  return comparison;
+}
+public static void main (String args[]){//test cases
 MyString guy = new MyString("hello");
 MyString bro = new MyString("i am but a chimney sweep.");
 System.out.println(guy);
