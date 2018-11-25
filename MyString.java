@@ -29,35 +29,33 @@ public String toString(){
 public int compareTo(CharSequence b){
   MyString a = new MyString(this);
   MyString z = new MyString(b);
-  int sum1= 0;
-  int sum2=0;
   int comparison=0;
   int len = a.length();
   int shorter = a.length();
   if (a.length()>z.length()){
     len = a.length();
     shorter=z.length();
-    comparison=1;
+    comparison=1;//if equal but one is shorter
   }
   else{
     len= z.length();
     shorter=a.length();
     if (a.length()<z.length()){
-    comparison=-1;}
+    comparison=-1;}//if equal but one is shorter
     else{
-      comparison=0;}
+      comparison=0;}//if fully equal
   }
   for (int c = 0;c < len ; c++){
     if (c<z.length() && c<a.length()){
       if (z.charAt(c)>a.charAt(c)){
-        return -1;}
+        return -1;}//reports first change
       else{
         if (z.charAt(c)<a.charAt(c)){
-        return 1;}
+        return 1;}//reports first change
       }
   }
 }
-  return comparison;
+  return comparison;//reports what to do when no changes(Longer or equal)
 }
 public static void main (String args[]){//test cases
 MyString guy = new MyString("hello");
