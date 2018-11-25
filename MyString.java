@@ -27,8 +27,8 @@ public String toString(){
   return value;
 }
 public int compareTo(CharSequence b){
-  if (this.equals(b)) return 0;
-  return -1;
+  MyString b2 = new MyString(b);
+  return this.toString().compareTo(b2.toString());
 }
   public static void main (String args[]){
 MyString guy = new MyString("hello");
