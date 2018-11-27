@@ -55,18 +55,27 @@ public int compareTo(CharSequence b){
       }
   }
 }
-  return comparison;//reports what to do when no changes(Longer or equal)
+  return comparison;//reports what to do when no changes(Longer or equalm)
 }
 public static void main (String args[]){//test cases
 MyString guy = new MyString("hello");
 MyString bro = new MyString("i am but a chimney sweep.");
+MyString man = new MyString(guy);
 System.out.println(guy);
+System.out.println(man);
 System.out.println(guy.length());
 System.out.println(guy.charAt(3));
 System.out.println(guy.subSequence(1,3));
 System.out.println(bro);
-System.out.println(guy.compareTo("america"));
-System.out.println(guy.compareTo("hello"));
-System.out.println(guy.compareTo(bro));
+System.out.println("hello".compareTo("america"));
+System.out.println(guy.compareTo("america"));//compares a mystring to a string
+//should return a positive number
+System.out.println();
+System.out.println(guy.compareTo(guy));
+System.out.println(guy.compareTo("hello"));//should return 0
+System.out.println();
+System.out.println("hello".compareTo("i am but a chimney sweep."));
+System.out.println(guy.compareTo(bro));//compares two mystrings
+//should return a negative number
   }
 }
