@@ -56,8 +56,8 @@ public int compareTo(CharSequence b){
       }
   }
 }
-  return comparison;//reports what to do when no changes(Longer or equalm)
-}
+  return comparison;//reports what to do when no changes(Longer or equal)
+  }
 public static void main (String args[]){//test cases
 MyString guy = new MyString("hello");
 MyString bro = new MyString("i am but a chimney sweep.");
