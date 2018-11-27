@@ -27,6 +27,7 @@ public String toString(){
   return value;
 }
 public int compareTo(CharSequence b){
+  if (b==null) throw new NullPointerException("Input cannot be null.");
   MyString a = new MyString(this);
   MyString z = new MyString(b);
   int comparison=0;
@@ -77,5 +78,7 @@ System.out.println();
 System.out.println("hello".compareTo("i am but a chimney sweep."));
 System.out.println(guy.compareTo(bro));//compares two mystrings
 //should return a negative number
+System.out.println(guy.compareTo("helloo"));
+System.out.println(guy.compareTo(null));
   }
 }
