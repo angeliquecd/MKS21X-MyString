@@ -7,12 +7,14 @@ public MyString(CharSequence a){//places each value into slot in array
   }
 }
 public char charAt(int index){//returns certain array value
+  if (index<0||index>=data.length) throw new ArrayIndexOutOfBoundsException();
   return data[index];
 }
 public int length(){//finds length of array
   return data.length;
 }
 public String subSequence(int start, int end){//loops through only part of data
+  if (start<0||end<0||end>=data.length||start>end) throw new ArrayIndexOutOfBoundsException();
   String value="";
   for (int a = start;a<end;a++){
     value+=""+data[a];
